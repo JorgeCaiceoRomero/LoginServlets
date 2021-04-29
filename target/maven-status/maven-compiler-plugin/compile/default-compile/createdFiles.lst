@@ -1,0 +1,7 @@
+pojos\mappedFiles\Usuarios.class
+util\HibernateUtil.class
+pojos\mappedFiles\UsuariosHome.class
+pojos\mappedFiles\Roles.class
+pojos\mappedFiles\RolesHome.class
+servlet\Login.class
+util\StringUtil.class
