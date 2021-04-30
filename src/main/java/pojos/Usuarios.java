@@ -8,14 +8,14 @@ public class Usuarios implements java.io.Serializable {
 
 	@Override
 	public String toString() {
-		return "Usuarios [id=" + id + ", roles=" + roles + ", email=" + email + ", clave=" + clave + ", nombre="
+		return "Usuarios [id=" + id + ", roles=" + idRol + ", email=" + email + ", clave=" + clave + ", nombre="
 				+ nombre + ", apellido1=" + apellido1 + ", apellido2=" + apellido2 + ", direccion=" + direccion
 				+ ", localidad=" + localidad + ", provincia=" + provincia + ", telefono=" + telefono + ", dni=" + dni
 				+ "]";
 	}
 
 	private Integer id;
-	private String roles;
+	private Integer idRol;
 	private String email;
 	private String clave;
 	private String nombre;
@@ -30,9 +30,9 @@ public class Usuarios implements java.io.Serializable {
 	public Usuarios() {
 	}
 
-	public Usuarios(String roles, String email, String clave, String nombre, String apellido1, String apellido2,
+	public Usuarios(Integer roles, String email, String clave, String nombre, String apellido1, String apellido2,
 			String direccion, String localidad, String provincia, String telefono, String dni) {
-		this.roles = roles;
+		this.idRol = roles;
 		this.email = email;
 		this.clave = clave;
 		this.nombre = nombre;
@@ -53,12 +53,12 @@ public class Usuarios implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public String getRoles() {
-		return this.roles;
+	public Integer getIdRol() {
+		return this.idRol;
 	}
 
-	public void setRoles(String roles) {
-		this.roles = roles;
+	public void setIdRol(Integer roles) {
+		this.idRol = roles;
 	}
 
 	public String getEmail() {

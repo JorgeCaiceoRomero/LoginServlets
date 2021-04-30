@@ -68,6 +68,7 @@ public class AltaUsuario extends HttpServlet {
 		Transaction tx=session.beginTransaction();
 		out = response.getWriter();
 		String idRol = request.getParameter("idrol");
+		int numIdRol = Integer.parseInt(idRol);
 		String email = request.getParameter("email");
 		String clave = request.getParameter("clave");
 		String nombre = request.getParameter("nombre");
@@ -78,7 +79,7 @@ public class AltaUsuario extends HttpServlet {
 		String provincia = request.getParameter("provincia");
 		String telefono = request.getParameter("telefono");
 		String dni = request.getParameter("dni");
-		Usuarios u = new Usuarios(idRol, email, clave, nombre, apellido1, apellido2, direccion, localidad, provincia, telefono, dni);
+		Usuarios u = new Usuarios(numIdRol, email, clave, nombre, apellido1, apellido2, direccion, localidad, provincia, telefono, dni);
 		UsuariosDAO.insertUsuario(session, u);
 		tx.commit();
 		
