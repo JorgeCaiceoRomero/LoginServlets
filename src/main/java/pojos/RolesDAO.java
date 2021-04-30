@@ -24,4 +24,8 @@ public class RolesDAO {
 	                   .uniqueResult();
 	  return r;
 	}
+	
+	public static void insertRol(Session s, Roles r) {	
+		s.save(r);
+	}
 }

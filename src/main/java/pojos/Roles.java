@@ -20,6 +20,10 @@ public class Roles implements java.io.Serializable {
 		this.rol = rol;
 		this.usuarioses = usuarioses;
 	}
+	
+	public Roles(String rol) {
+		this.rol = rol;
+	}
 
 	public Integer getId() {
 		return this.id;
