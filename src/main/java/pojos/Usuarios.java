@@ -15,7 +15,7 @@ public class Usuarios implements java.io.Serializable {
 	}
 
 	private Integer id;
-	private Roles roles;
+	private String roles;
 	private String email;
 	private String clave;
 	private String nombre;
@@ -30,7 +30,7 @@ public class Usuarios implements java.io.Serializable {
 	public Usuarios() {
 	}
 
-	public Usuarios(Roles roles, String email, String clave, String nombre, String apellido1, String apellido2,
+	public Usuarios(String roles, String email, String clave, String nombre, String apellido1, String apellido2,
 			String direccion, String localidad, String provincia, String telefono, String dni) {
 		this.roles = roles;
 		this.email = email;
@@ -53,11 +53,11 @@ public class Usuarios implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public Roles getRoles() {
+	public String getRoles() {
 		return this.roles;
 	}
 
-	public void setRoles(Roles roles) {
+	public void setRoles(String roles) {
 		this.roles = roles;
 	}
 

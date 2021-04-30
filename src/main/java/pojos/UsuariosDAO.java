@@ -30,5 +30,9 @@ public class UsuariosDAO {
 		                   .setMaxResults(1)
 		                   .uniqueResult();
 		  return u;
-		}
+	}
+	
+	public static void insertUsuario(Session s, Usuarios u) {	
+		s.save(u);
+	}
 }
