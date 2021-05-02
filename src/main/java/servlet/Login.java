@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -89,7 +90,7 @@ public class Login extends HttpServlet {
 		
 		if(pass) {
 			
-			logger.info("Credenciales correctas");
+			/*logger.info("Credenciales correctas");
 	        out.println("<html>");
 	        out.println("<head></head>");         
 	        out.println("<body>");
@@ -100,16 +101,19 @@ public class Login extends HttpServlet {
 	        out.println("<br>");
 	        
 	        out.println("</body>");
-	        out.println("</html>");  
-		
+	        out.println("</html>");  */
+			HttpSession session = request.getSession(true);
+			session.setAttribute("fecha", new java.util.Date());
+			session.setAttribute("nombreUsuario", usu);
+			request.getRequestDispatcher("Menu.jsp").forward(request, response);
 		}
 		else {
-			logger.info("Credenciales incorrectas");
+			logger.info("Credenciales incorrectas desde Login");
 			out.println("<html>");
 	        out.println("<head></head>");         
 	        out.println("<body>");
 	
-	        out.println("Credenciales incorrectas");
+	        out.println("Credenciales incorrectas desde Login");
 	        out.println("<br>");
 	        
 	        out.println("</body>");

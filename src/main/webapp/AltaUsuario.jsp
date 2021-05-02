@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,6 +8,7 @@
 </head>
 <body>
     <form method="post" action="http://localhost:8080/Login/AltaUsuario">
+    <jsp:include page="Header.jsp" flush="false"/>
         <h1>Alta Usuario</h1>  
         <label>Id_Rol: </label>
         <input type="text" name="idrol" id="idrol"><br><br>
@@ -19,13 +22,13 @@
         <input type="text" name="apellido1" id="apellido1"><br><br>
         <label>Apellido2: </label>
         <input type="text" name="apellido2" id="apellido2"><br><br>
-        <label>DirecciÃ³n: </label>
+        <label>Dirección: </label>
         <input type="text" name="direccion" id="direccion"><br><br>
         <label>Localidad: </label>
         <input type="text" name="localidad" id="localidad"><br><br>
         <label>Provincia: </label>
         <input type="text" name="provincia" id="provincia"><br><br>
-        <label>TelÃ©fono: </label>
+        <label>Teléfono: </label>
         <input type="text" name="telefono" id="telefono"><br><br>
         <label>DNI: </label>
         <input type="text" name="dni" id="dni"><br><br>
