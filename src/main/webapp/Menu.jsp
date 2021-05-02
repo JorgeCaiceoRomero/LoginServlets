@@ -24,6 +24,14 @@
 		<input type="submit"  value="Lista de usuarios"></input>
 		
 	</form>
+	<form action="ListarCategorias.jsp"method="post">	
+		<input type="submit"  value="Lista de categorías"></input>
+		
+	</form>
+	<form action="ListarProductos.jsp"method="post">	
+		<input type="submit"  value="Lista de productos"></input>
+		
+	</form>
 		
 </body>
 </html>

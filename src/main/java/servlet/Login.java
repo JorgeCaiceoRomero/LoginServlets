@@ -104,6 +104,22 @@ public class Login extends HttpServlet {
 	        out.println("</html>");  */
 			HttpSession session = request.getSession(true);
 			session.setAttribute("fecha", new java.util.Date());
+			String rol = "";
+			switch(usuario.getIdRol()) {
+			case 1:
+				rol="Admin";
+				break;
+			case 2:
+				rol="Empleado";
+				break;
+			case 3:
+				rol="cliente";
+				break;
+			default:
+				rol="cliente";
+				break;
+			}
+			session.setAttribute("rol", rol);
 			session.setAttribute("nombreUsuario", usu);
 			request.getRequestDispatcher("Menu.jsp").forward(request, response);
 		}
@@ -120,24 +136,5 @@ public class Login extends HttpServlet {
 	        out.println("</html>");
 		}
 	}
-	
-	/*private void imprimeFormulario(PrintWriter out) {
-		
-		PrintWriter res = out;
-		
-		res.println("<html>");
-		res.println("<title>Servlet Login</title>");
-		res.println("<body>");
-		res.println("<div><label>User: </label></div>");
-		res.println("<div><input type=\"text\" name=\"user\" size=\"20\"><br></div>");
-		
-		res.println("<div><label>Pass: </label></div>");
-		res.println("<div><input type=\"password\" name=\"pass\" size=\"20\"></div>");
-		
-		res.println("<input type=\"submit\" name=\"submit\" value=\"Entrar\" method=\"post\">");
-		res.println("</body>");
-		res.println("</html>");
-
-	}*/
 
 }

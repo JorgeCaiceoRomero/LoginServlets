@@ -7,7 +7,13 @@
 <title>Cabecera</title>
 </head>
 <body>
-	<h3>Usuario: ${sessionScope.nombreUsuario}, Inicio de sesión: ${sessionScope.fecha}	
+	<h3>Usuario: ${sessionScope.nombreUsuario}, Rol: ${sessionScope.rol}, Inicio de sesión: ${sessionScope.fecha}	
 	</h3>
+	<form action="javascript:history.back()"> <input type="submit" value="&lt;-"/></form>
+	<form action="Login.jsp"method="post">	
+		<input type="submit"  value="Cerrar Sesión"></input>
+		
+	</form>
+	<br/><br/>
 </body>
 </html>

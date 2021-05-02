@@ -7,6 +7,12 @@
 <title>Login</title>
 </head>
 <body>
+<%
+	if(session!=null){
+		session=request.getSession();
+		session.invalidate();
+	}	
+	%>
 	<form method="post" action="http://localhost:8080/Login/Login">
 	Ingrese nombre de usuario:
 	<input type="text" name="user" size="20"><br>
